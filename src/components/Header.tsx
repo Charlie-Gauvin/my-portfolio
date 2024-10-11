@@ -12,12 +12,12 @@ function Header() {
       className="flex w-full items-center justify-around bg-background p-4 pt-5"
       role="banner"
     >
-      <h1
+      <span
         className="font-syne text-3xl font-medium text-primary"
         aria-label="Logo du site"
       >
         Charlie
-      </h1>
+      </span>
 
       {/* Bouton Buger Menu */}
       <button
@@ -69,7 +69,7 @@ function Header() {
 
     {/* Menu burger */}
     {isMenuOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-background">
+        <div className="fixed inset-0 z-40 flex items-center justify-center bg-background">
           <div className="flex flex-col items-center">
             <a href="#" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary">HOME</a>
             <a href="#" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary">ABOUT ME</a>
