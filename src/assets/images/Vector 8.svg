@@ -1,0 +1,15 @@
+<svg width="600" height="550" viewBox="0 0 867 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_1_27)">
+<path d="M485.187 473.804C580.282 467.548 642.347 432.446 702.715 350.776C825.011 185.329 110.486 132.772 209.995 314.534C272.738 429.139 363.72 481.796 485.187 473.804Z" fill="white" fill-opacity="0.18"/>
+</g>
+<defs>
+<filter id="filter0_f_1_27" x="0.455074" y="0.353455" width="916.391" height="674.24" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_1_27"/>
+</filter>
+</defs>
+</svg>
+
+
+<!-- Valeur de base du svg w:867/ h:675 -->
