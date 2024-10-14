@@ -7,6 +7,11 @@ function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  //* Fermer le menu
+  const closeMenu = () => { 
+    setIsMenuOpen(false);
+  };
+
   return (
     <header
       className="flex w-full items-center justify-around bg-background p-4 pt-5"
@@ -26,9 +31,15 @@ function Header() {
         aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
       >
         {isMenuOpen ? (
-          <span className="block text-4xl text-primary">✕</span>
+                      <button
+                      className="fixed right-4 top-4 text-4xl text-primary"
+                      onClick={closeMenu}
+                      aria-label="Fermer le menu"
+                    >
+                      ✕
+                    </button>
         ) : (
-          <button>
+          <button className="fixed right-4 top-6">
               <span className="mb-1 block h-0.5 w-6 rounded-md bg-primary"></span>
               <span className="mb-1 block h-0.5 w-6 rounded-md bg-primary"></span>
               <span className="block h-0.5 w-6 rounded-md bg-primary"></span>
@@ -50,7 +61,7 @@ function Header() {
           </li>
           <li>
             <a
-              href="#"
+              href="#about"
               className="transition-colors duration-300 hover:text-primary"
             >
               ABOUT ME
@@ -68,16 +79,23 @@ function Header() {
       </nav>
 
     {/* Menu burger */}
-    {isMenuOpen && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center bg-background">
-          <div className="flex flex-col items-center">
-            <a href="#" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary">HOME</a>
-            <a href="#" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary">ABOUT ME</a>
-            <a href="#" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary">PROJECTS</a>
-            <a href="#" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary">CONTACT</a>
-          </div>
+      <div
+        className={`fixed left-0 top-0 z-40 w-full bg-background p-4 transition-transform duration-300 ease-in-out ${
+          isMenuOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="mt-16 flex flex-col items-center">
+          <a href="#" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>HOME</a>
+          <a href="#about" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>ABOUT ME</a>
+          <a href="#" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>PROJECTS</a>
+          <a href="#" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>CONTACT</a>
         </div>
-    )}
+      </div>
+
+      {/* Couche opaque */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-30 bg-black opacity-50" onClick={closeMenu} />
+      )}
 
       {/* Bouton "CONTACT" uniquement visible à partir de md */}
       <button

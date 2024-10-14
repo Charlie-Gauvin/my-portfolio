@@ -52,6 +52,7 @@ function Hero() {
       {/* <figure className="absolute left-3/4 top-16 -translate-x-1/2">
         <img src={vector} alt="w-full h-auto max-w-xs md:max-w-md lg:max-w-lg" />
       </figure> */}
+      <a href="#about">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -66,6 +67,7 @@ function Hero() {
           d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
         />
       </svg>
+      </a>
     </section>
   );
 }
