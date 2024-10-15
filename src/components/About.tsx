@@ -17,7 +17,7 @@ function About() {
       {/* Texte de présentation */}
       <div className="mx-auto flex flex-col-reverse items-center justify-center gap-16 sm:flex-col md:flex-row lg:pt-32">
         <div className="w-full px-6 md:w-1/2">
-          <p className="pb-8 text-justify font-rubik text-base font-normal tracking-wide text-secondary sm:text-lg md:text-xl lg:text-2xl">
+          <p className="pb-8 text-justify font-rubik text-base font-normal tracking-wide text-secondary sm:text-sm md:text-base lg:text-base xl:text-lg">
             I am a passionate web developer undergoing a career transition from
             a previous background as a nurse. I completed an intensive 6-month
             training program at O'clock school, where I specialized in fullstack
@@ -28,7 +28,8 @@ function About() {
             valuable asset to any project.
    
           </p>
-          <button className="rounded-full bg-orange px-9 py-4 font-rubik text-xl font-medium text-primary">
+          {/* px-9 py-4 */}
+          <button className="rounded-full bg-orange px-5 py-4 font-rubik text-sm font-medium text-primary md:px-9 md:py-4 md:text-base">
             Download Resume
           </button>
         </div>

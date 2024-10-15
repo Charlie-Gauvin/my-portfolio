@@ -13,6 +13,7 @@ export default {
         btn: '#0E0E0F', // Couleur de fond du bouton
         orange: '#FF9143', // Couleur de la marque
         footer: '#131313', // Couleur du footer
+        test: "#262A2C", // test SKILL
       },
       fontFamily: {
         syne: ['Syne', 'sans-serif'],
