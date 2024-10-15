@@ -26,7 +26,7 @@ function Header() {
 
       {/* Bouton Buger Menu */}
       <button
-        className="z-50  flex flex-col items-center md:hidden"
+        className="z-50 flex flex-col items-center md:hidden"
         onClick={handleMenu}
         aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
       >
@@ -69,6 +69,14 @@ function Header() {
           </li>
           <li>
             <a
+              href="#skills"
+              className="transition-colors duration-300 hover:text-primary"
+            >
+              SKILLS
+            </a>
+          </li>
+          <li>
+            <a
               href="#"
               className="transition-colors duration-300 hover:text-primary"
             >
@@ -87,6 +95,7 @@ function Header() {
         <div className="mt-16 flex flex-col items-center">
           <a href="#" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>HOME</a>
           <a href="#about" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>ABOUT ME</a>
+          <a href="#skills" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>SKILLS</a>
           <a href="#" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>PROJECTS</a>
           <a href="#" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>CONTACT</a>
         </div>
