@@ -34,7 +34,7 @@ function Skills() {
       <div>
         {/* BLOCK FRONTEND */}
         <div className="mt-20">
-          <h4 className="flex items-center justify-center pb-20 text-2xl font-semibold text-primary md:text-4xl">
+          <h4 className="flex items-center justify-center pb-20 font-syne text-2xl font-semibold text-primary md:text-4xl">
             <div className="mr-4 w-14 border-t-2 border-orange"></div>
             <span>Frontend</span>
             <div className="ml-4 w-14 border-t-2 border-orange"></div>
@@ -59,7 +59,7 @@ function Skills() {
                 className="flex h-14 w-11 flex-col items-center md:h-20 md:w-16 lg:h-24 lg:w-20"
               >
                 <img src={src} alt={alt} className="max-h-full max-w-full" />
-                <span className="mt-2 text-xs font-semibold text-primary  md:text-sm">
+                <span className="mt-2 font-rubik text-xs font-semibold text-primary  md:text-sm">
                   {name}
                 </span>
               </li>
@@ -68,7 +68,7 @@ function Skills() {
         </div>
         {/* BLOCK BACKEND */}
         <div className="mt-4">
-          <h4 className="flex items-center justify-center py-20 text-2xl font-semibold text-primary md:text-4xl">
+          <h4 className="flex items-center justify-center py-20 font-syne text-2xl font-semibold text-primary md:text-4xl">
             <div className="mr-4 w-14 border-t-2 border-orange"></div>
             <span>Backend</span>
             <div className="ml-4 w-14 border-t-2 border-orange"></div>
@@ -79,7 +79,6 @@ function Skills() {
               { src: express, alt: "logo-express", name: "express" },
               { src: sequelize, alt: "logo-sequelize", name: "sequelize" },
               { src: psql, alt: "logo-psql", name: "postgresql" },
-              // RAJOUTER PSQL
             ].map(({ src, alt, name }) => (
               // h-60 w-52
 
@@ -88,7 +87,7 @@ function Skills() {
                 className="flex h-14 w-11 flex-col items-center md:h-20 md:w-16 lg:h-24 lg:w-20"
               >
                 <img src={src} alt={alt} className="max-h-full max-w-full" />
-                <span className="mt-2 text-xs font-semibold text-primary  md:text-sm">
+                <span className="mt-2 font-rubik text-xs font-semibold text-primary  md:text-sm">
                   {name}
                 </span>
               </li>
@@ -97,7 +96,7 @@ function Skills() {
         </div>
         {/* BLOCK OTHERS */}
         <div className="mt-4">
-          <h4 className="flex items-center justify-center py-20 text-2xl font-semibold text-primary md:text-4xl">
+          <h4 className="flex items-center justify-center py-20 font-syne text-2xl font-semibold text-primary md:text-4xl">
             <div className="mr-4 w-14 border-t-2 border-orange"></div>
             <span>Others</span>
             <div className="ml-4 w-14 border-t-2 border-orange"></div>
@@ -108,7 +107,6 @@ function Skills() {
               { src: git, alt: "logo-git", name: "git" },
               { src: vite, alt: "logo-vite", name: "vite" },
               { src: figma, alt: "logo-figma", name: "figma" },
-              // RAJOUTER PSQL
             ].map(({ src, alt, name }) => (
               // h-60 w-52
 
@@ -117,7 +115,7 @@ function Skills() {
                 className="flex h-14 w-11 flex-col items-center md:h-20 md:w-16 lg:h-24 lg:w-20"
               >
                 <img src={src} alt={alt} className="max-h-full max-w-full" />
-                <span className="mt-2 text-xs font-semibold text-primary  md:text-sm">
+                <span className="mt-2 font-rubik text-xs font-semibold text-primary md:text-sm">
                   {name}
                 </span>
               </li>
@@ -126,13 +124,13 @@ function Skills() {
         </div>
         {/* BLOCK SOFT SKILLS */}
         <div className="mt-4">
-          <h4 className="flex items-center justify-center py-20 text-2xl font-semibold text-primary md:text-4xl">
+          <h4 className="flex items-center justify-center py-20 font-syne text-2xl font-semibold text-primary md:text-4xl">
             <div className="mr-4 w-14 border-t-2 border-orange"></div>
             <span>Soft Skills</span>
             <div className="ml-4 w-14 border-t-2 border-orange"></div>
           </h4>
           {/* grid grid-cols-3 gap-20 px-8 md:grid-cols-4 lg:grid-cols-5 */}
-          <ul className="grid grid-cols-1 gap-4 px-16 font-medium text-primary sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid grid-cols-1 gap-4 px-16 sm:grid-cols-2 lg:grid-cols-3">
             {[
               "Esprit d'équipe",
               "Communication",
@@ -144,7 +142,7 @@ function Skills() {
             ].map((skill) => (
               <li
                 key={skill}
-                className="rounded-lg border border-orange bg-[#1E1E1E] p-2 font-rubik text-sm font-normal transition-colors hover:bg-[#2A2A2A] md:text-base md:font-semibold"
+                className="rounded-lg border border-orange bg-[#1E1E1E] p-2 font-rubik text-sm font-normal text-primary transition-colors hover:bg-[#2A2A2A] md:text-base md:font-semibold"
               >
                 {skill}
               </li>

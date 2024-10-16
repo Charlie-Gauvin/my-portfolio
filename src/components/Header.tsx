@@ -39,7 +39,7 @@ function Header() {
                       ✕
                     </button>
         ) : (
-          <button className="fixed right-4 top-6">
+          <button className="absolute right-4 top-7">
               <span className="mb-1 block h-0.5 w-6 rounded-md bg-primary"></span>
               <span className="mb-1 block h-0.5 w-6 rounded-md bg-primary"></span>
               <span className="block h-0.5 w-6 rounded-md bg-primary"></span>
@@ -77,7 +77,7 @@ function Header() {
           </li>
           <li>
             <a
-              href="#"
+              href="#projects"
               className="transition-colors duration-300 hover:text-primary"
             >
               PROJECTS
@@ -93,10 +93,10 @@ function Header() {
         }`}
       >
         <div className="mt-16 flex flex-col items-center">
-          <a href="#" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>HOME</a>
+          <a href="#hero" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>HOME</a>
           <a href="#about" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>ABOUT ME</a>
           <a href="#skills" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>SKILLS</a>
-          <a href="#" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>PROJECTS</a>
+          <a href="#projects" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>PROJECTS</a>
           <a href="#" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>CONTACT</a>
         </div>
       </div>
