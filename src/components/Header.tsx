@@ -97,7 +97,7 @@ function Header() {
           <a href="#about" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>ABOUT ME</a>
           <a href="#skills" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>SKILLS</a>
           <a href="#projects" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>PROJECTS</a>
-          <a href="#" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>CONTACT</a>
+          <a href="#contact" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>CONTACT</a>
         </div>
       </div>
 
@@ -107,12 +107,13 @@ function Header() {
       )}
 
       {/* Bouton "CONTACT" uniquement visible à partir de md */}
-      <button
+      <a
+        href="#contact"
         className="hidden rounded-full border-2 border-secondary bg-btn px-9 py-4 font-rubik text-sm font-bold text-primary transition-colors duration-300 hover:border-orange hover:bg-orange md:block"
         aria-label="Contactez-moi"
       >
         CONTACT
-      </button>
+      </a>
     </header>
   );
 }

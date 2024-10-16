@@ -14,7 +14,7 @@ function Card({ src, alt, title, description, tags }: CardProps) {
       <img className="h-60 w-full object-cover transition hover:blur-sm" src={src} alt={alt} />
       <div className="px-6 py-4">
         <div className="mb-2 text-lg font-bold text-primary md:text-xl">{title}</div>
-        <p className="text-left text-sm text-descard md:text-base">{description}</p>
+        <p className="text-left text-sm text-gris md:text-base">{description}</p>
       </div>
       <div className="px-6 pb-2 pt-4">
         {tags.map((tags, index) => (
