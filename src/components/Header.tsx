@@ -12,8 +12,7 @@ function Header() {
   };
 
 
-//* Gestion de l'état du menu burger
-
+//* Gestion de l'état du menu burger - Fermeture du menu si la largeur de l'écran est supérieure ou égale à 768px
 const handleResize = () => {
   if (window.innerWidth >= 768) {
     closeMenu();
