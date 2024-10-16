@@ -13,6 +13,7 @@ function Header() {
   };
 
   return (
+    // sticky top-0 - A voir ??
     <header
       className="flex w-full items-center justify-around bg-background p-4 pt-5"
       role="banner"

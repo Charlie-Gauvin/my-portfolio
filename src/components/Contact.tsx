@@ -1,8 +1,10 @@
+import EmailButton from "./utils/EmailButton";
+
 function Contact() {
   return (
     <section
       id="contact"
-      className="mt-40 flex flex-col items-center pt-16 text-center"
+      className="my-40 flex flex-col items-center pt-16 text-center"
     >
       {/* BLOCK TITRE/ SOUS TITRE */}
       <div className="pb-16">
@@ -33,9 +35,7 @@ function Contact() {
               My Email
               
             </h5>
-            
-
-            <a
+            {/* <a
               href="#"
               className="flex items-center gap-4 pl-8 font-rubik text-primary underline underline-offset-4"
             >
@@ -53,7 +53,8 @@ function Contact() {
                 />
               </svg>
               Monemail@gmail.com
-            </a>
+            </a> */}
+            <EmailButton />
           </div>
           <div className="mt-10">
             <h5 className="font-syne text-sm font-bold text-primary md:text-base">
@@ -123,7 +124,7 @@ function Contact() {
             ></textarea>
             <button
               type="button"
-              className="!mt-6 rounded-md  border border-orange bg-orange px-5 py-3 text-sm font-semibold tracking-wide text-primary hover:border hover:border-secondary hover:bg-btn md:text-base"
+              className="!mt-6 rounded-md border border-orange bg-orange px-5 py-3 text-sm font-semibold tracking-wide text-primary hover:border hover:border-secondary hover:bg-btn md:text-base"
             >
               Send
             </button>
