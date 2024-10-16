@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 
 function Hero() {
   return (
-    <section className="-mt-28 flex h-screen flex-col justify-center text-center ">
+    <section id="hero" className="-mt-28 flex h-screen flex-col justify-center text-center ">
       <h1 className="mb-4 font-syne text-3xl font-normal text-primary sm:text-5xl md:text-6xl">
         <Typewriter
           onInit={(typewriter) => {
