@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -6,16 +6,33 @@ function Header() {
   const handleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
   //* Fermer le menu
   const closeMenu = () => { 
     setIsMenuOpen(false);
   };
 
+
+//* Gestion de l'état du menu burger
+
+const handleResize = () => {
+  if (window.innerWidth >= 768) {
+    closeMenu();
+  }
+};
+
+useEffect(() => {
+  window.addEventListener('resize', handleResize);
+  return () => {
+    window.removeEventListener('resize', handleResize);
+  };
+// eslint-disable-next-line react-hooks/exhaustive-deps
+}, []);
+
+
   return (
     // sticky top-0 - A voir ??
     <header
-      className="flex w-full items-center justify-around bg-background p-4 pt-5"
+      className="sticky top-0 z-10 flex w-full items-center justify-around bg-background p-4 pt-5"
       role="banner"
     >
       <span

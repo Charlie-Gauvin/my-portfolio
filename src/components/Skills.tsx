@@ -20,7 +20,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="mt-40 flex flex-col items-center pt-16 text-center"
+      className="mt-40 flex flex-col items-center  pt-28 text-center"
     >
       {/* BLOCK TITRE/ SOUS TITRE */}
       <div className="pb-16">

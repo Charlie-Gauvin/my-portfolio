@@ -3,7 +3,7 @@ import guillemets from "../assets/images/“.svg";
 
 function About() {
   return (
-    <section id="about" className="flex flex-col items-center pt-16 text-center">
+    <section id="about" className="flex flex-col items-center pt-28 text-center">
       {/* Titre et sous titre de la page */}
       <div className="pb-16">
         <h3 className="mb-4 font-syne text-3xl font-normal text-primary sm:text-5xl md:text-6xl">
@@ -41,7 +41,7 @@ function About() {
       </div>
         
         {/* Guillemets */}
-        <figure className="absolute hidden md:bottom-24 md:left-32 lg:-bottom-80 lg:left-14 lg:block xl:-bottom-80 xl:left-36">
+        <figure className="absolute hidden md:bottom-24 md:left-32 lg:-bottom-96 lg:left-14 lg:block xl:-bottom-96 xl:left-36">
           <img src={guillemets} alt="“"/>
         </figure>
     </section>

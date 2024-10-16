@@ -4,7 +4,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="my-40 flex flex-col items-center pt-16 text-center"
+      className="my-40 flex flex-col items-center  pt-28 text-center"
     >
       {/* BLOCK TITRE/ SOUS TITRE */}
       <div className="pb-16">
