@@ -14,7 +14,7 @@ export default {
         orange: '#FF9143', // Couleur de la marque
         footer: '#131313', // Couleur du footer
         bgcard: "#262A2C", // test SKILL
-        descard: "#A8A8A8", // text description card
+        gris: "#A8A8A8", // text description card
       },
       fontFamily: {
         syne: ['Syne', 'sans-serif'],
