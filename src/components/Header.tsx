@@ -67,7 +67,7 @@ useEffect(() => {
       
       {/* Navigation classique pour écrans normal md et plus */}
       <nav className="hidden md:block" aria-label="navigation principale">
-        <ul className="flex gap-14 font-rubik text-sm font-semibold text-secondary opacity-50">
+        <ul className="flex font-rubik font-semibold text-secondary opacity-50 sm:gap-8  sm:text-xs lg:gap-14 lg:text-sm">
           <li>
             <a
               href="#hero"
@@ -110,11 +110,11 @@ useEffect(() => {
         }`}
       >
         <div className="mt-16 flex flex-col items-center">
-          <a href="#hero" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>HOME</a>
-          <a href="#about" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>ABOUT ME</a>
-          <a href="#skills" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>SKILLS</a>
-          <a href="#projects" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>PROJECTS</a>
-          <a href="#contact" className="mb-4 text-2xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>CONTACT</a>
+          <a href="#hero" className="mb-4 text-xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>HOME</a>
+          <a href="#about" className="mb-4 text-xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>ABOUT ME</a>
+          <a href="#skills" className="mb-4 text-xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>SKILLS</a>
+          <a href="#projects" className="mb-4 text-xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>PROJECTS</a>
+          <a href="#contact" className="mb-4 text-xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>CONTACT</a>
         </div>
       </div>
 

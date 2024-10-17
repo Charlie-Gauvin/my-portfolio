@@ -2,8 +2,6 @@ import EmailButton from "../Contact/EmailButton";
 import Form from "../Contact/Form";
 
 function Contact() {
-
-
   return (
     <section
       id="contact"
@@ -29,10 +27,8 @@ function Contact() {
           <div className="mx-auto mt-2 h-1 w-32 bg-orange sm:mx-0 sm:w-40"></div>{" "}
           {/* Ajoute un div pour la couleur */}
           <p className="mt-4 font-rubik text-sm text-primary md:text-base">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
-            consequuntur possimus. Aut, beatae unde? Sapiente quod optio
-            numquam. Ea eius numquam, obcaecati ex temporibus porro architecto
-            quae quidem at perferendis.
+            N'hésitez pas à me contacter ! Je reste à votre écoute pour toutes questions, échange ou collaborations potentielles.
+            Je m'engage à vous répondre rapidement.
           </p>
           <div className="mt-10">
             <h5 className="mb-4 font-syne text-sm font-bold text-primary md:text-base">
@@ -65,7 +61,7 @@ function Contact() {
             </h5>
             <ul className="mt-4 flex gap-5 pl-8">
               <li>
-                <a href="#">
+                <a href="https://www.linkedin.com/in/charlie-gauvin" target="_blank" rel="noopener noreferrer">
                   <svg
                     width="32px"
                     height="32px"
@@ -82,7 +78,7 @@ function Contact() {
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://github.com/Charlie-Gauvin" target="_blank" rel="noopener noreferrer">
                   <svg
                     width="32px"
                     height="32px"

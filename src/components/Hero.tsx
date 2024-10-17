@@ -51,7 +51,7 @@ function Hero() {
       <div>
             <ul className="mt-4 flex justify-center gap-5">
               <li className="transition-transform duration-300 hover:-translate-y-1">
-                <a href="#" >
+                <a href="https://www.linkedin.com/in/charlie-gauvin" target="_blank" rel="noopener noreferrer">
 
                   <svg
                     fill="#FFFFFF"
@@ -71,7 +71,7 @@ function Hero() {
                 </a>
               </li>
               <li className="transition-transform duration-300 hover:-translate-y-1">
-                <a href="#">
+                <a href="https://github.com/Charlie-Gauvin" target="_blank" rel="noopener noreferrer">
                   <svg
                   fill="#FFFFFF"
                     width="32px"
@@ -101,7 +101,7 @@ function Hero() {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="#FFFFFF"
-        className="absolute bottom-8 left-1/2 size-6 -translate-x-1/2 animate-bounce cursor-pointer sm:size-8 md:size-10"
+        className="absolute bottom-8 left-1/2 -ml-3 size-6 -translate-x-1/2 animate-bounce sm:-ml-5 sm:size-8 md:size-10"
       >
         <path
           strokeLinecap="round"
