@@ -56,11 +56,11 @@ useEffect(() => {
                       ✕
                     </button>
         ) : (
-          <button className="absolute right-4 top-7">
+          <span className="absolute right-4 top-7">
               <span className="mb-1 block h-0.5 w-6 rounded-md bg-primary"></span>
               <span className="mb-1 block h-0.5 w-6 rounded-md bg-primary"></span>
               <span className="block h-0.5 w-6 rounded-md bg-primary"></span>
-          </button>
+          </span>
         )}
       </button> 
 
@@ -70,7 +70,7 @@ useEffect(() => {
         <ul className="flex gap-14 font-rubik text-sm font-semibold text-secondary opacity-50">
           <li>
             <a
-              href="#"
+              href="#hero"
               className="transition-colors duration-300 hover:text-primary"
             >
               HOME

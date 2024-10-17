@@ -3,8 +3,9 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Project from "./components/project/Project";
-import Contact from "./components/Contact";
+import Contact from "./components/Contact/Contact"
 import Footer from "./components/Footer";
+import ScrollToTopButton from "./components/utils/ScrollToTop";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Project />
       <Contact />
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }

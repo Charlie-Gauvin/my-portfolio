@@ -1,6 +1,9 @@
-import EmailButton from "./utils/EmailButton";
+import EmailButton from "../Contact/EmailButton";
+import Form from "../Contact/Form";
 
 function Contact() {
+
+
   return (
     <section
       id="contact"
@@ -23,7 +26,8 @@ function Contact() {
           <h4 className="text-center font-syne text-2xl font-bold text-primary md:text-left md:text-3xl">
             Let's Talk !
           </h4>
-          <div className="mx-auto mt-2 h-1 w-32 bg-orange sm:mx-0 sm:w-40"></div> {/* Ajoute un div pour la couleur */}
+          <div className="mx-auto mt-2 h-1 w-32 bg-orange sm:mx-0 sm:w-40"></div>{" "}
+          {/* Ajoute un div pour la couleur */}
           <p className="mt-4 font-rubik text-sm text-primary md:text-base">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
             consequuntur possimus. Aut, beatae unde? Sapiente quod optio
@@ -32,8 +36,7 @@ function Contact() {
           </p>
           <div className="mt-10">
             <h5 className="mb-4 font-syne text-sm font-bold text-primary md:text-base">
-              My Email
-              
+              My Email :
             </h5>
             {/* <a
               href="#"
@@ -58,7 +61,7 @@ function Contact() {
           </div>
           <div className="mt-10">
             <h5 className="font-syne text-sm font-bold text-primary md:text-base">
-              Socials
+              Socials :
             </h5>
             <ul className="mt-4 flex gap-5 pl-8">
               <li>
@@ -100,35 +103,7 @@ function Contact() {
         </div>
         {/* 2ème partie du formulaire */}
         <div>
-          <form className="ml-auto space-y-4">
-            <input
-              type="text"
-              placeholder="Name"
-              className="w-full rounded-md bg-primary px-4 py-3 text-sm text-black outline-orange focus:bg-transparent focus:text-primary"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full rounded-md bg-primary px-4 py-3 text-sm text-black outline-orange focus:bg-transparent focus:text-primary"
-            />
-            <input
-              type="text"
-              placeholder="Subject"
-              className="w-full rounded-md bg-primary px-4 py-3 text-sm text-black outline-orange focus:bg-transparent focus:text-primary"
-            />
-            <textarea
-              placeholder="Message"
-              maxLength={500}
-              rows={6}
-              className="w-full resize-none rounded-md bg-primary px-4 pt-3 text-sm text-black outline-orange focus:bg-transparent focus:text-primary"
-            ></textarea>
-            <button
-              type="button"
-              className="!mt-6 rounded-md border border-orange bg-orange px-5 py-3 text-sm font-semibold tracking-wide text-primary hover:border hover:border-secondary hover:bg-btn md:text-base"
-            >
-              Send
-            </button>
-          </form>
+          <Form />
         </div>
       </div>
     </section>

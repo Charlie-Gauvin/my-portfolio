@@ -15,6 +15,7 @@ import github from "../assets/images/logo/github.svg";
 import git from "../assets/images/logo/git.svg";
 import figma from "../assets/images/logo/figma.svg";
 import psql from "../assets/images/logo/postgresql.svg";
+import docker from "../assets/images/logo/docker.svg";
 
 function Skills() {
   return (
@@ -105,6 +106,7 @@ function Skills() {
             {[
               { src: github, alt: "logo-github", name: "github" },
               { src: git, alt: "logo-git", name: "git" },
+              { src: docker, alt: "logo-docker", name: "docker" },
               { src: vite, alt: "logo-vite", name: "vite" },
               { src: figma, alt: "logo-figma", name: "figma" },
             ].map(({ src, alt, name }) => (
