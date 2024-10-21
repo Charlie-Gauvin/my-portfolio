@@ -1,5 +1,6 @@
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
+import { useTranslation } from 'react-i18next';
 
 type FormData = {
   name: string;
@@ -9,6 +10,10 @@ type FormData = {
 };
 
 function Form() {
+
+
+const { t } = useTranslation();
+
   const {
     register,
     handleSubmit,
@@ -63,7 +68,7 @@ function Form() {
         <input
           id="name"
           type="text"
-          placeholder="Your Name"
+          placeholder= {t("contact.form.name")}
           className="w-full rounded-md bg-primary px-4 py-3 text-sm text-black outline-orange focus:bg-transparent focus:text-primary"
           {...register("name", { required: true, maxLength: 70 })}
         />
@@ -80,7 +85,7 @@ function Form() {
         <input
           id="email"
           type="email"
-          placeholder="Your Email"
+          placeholder={t("contact.form.email")}
           className="w-full rounded-md bg-primary px-4 py-3 text-sm text-black outline-orange focus:bg-transparent focus:text-primary"
           {...register("email", { required: true, maxLength: 254 })}
         />
@@ -97,7 +102,7 @@ function Form() {
         <input
           id="subject"
           type="text"
-          placeholder="Subject"
+          placeholder={t("contact.form.subject")}
           className="w-full rounded-md bg-primary px-4 py-3 text-sm text-black outline-orange focus:bg-transparent focus:text-primary"
           {...register("subject", { required: true, maxLength: 100 })}
         />
@@ -113,7 +118,7 @@ function Form() {
         </label>
         <textarea
           id="message"
-          placeholder="Your Message"
+          placeholder={t("contact.form.message")}
           maxLength={700} // Modifie si tu veux un maximum différent
           rows={6}
           className="w-full resize-none rounded-md bg-primary px-4 pt-3 text-sm text-black outline-orange focus:bg-transparent focus:text-primary"

@@ -1,7 +1,11 @@
 import EmailButton from "../Contact/EmailButton";
 import Form from "../Contact/Form";
+import { useTranslation } from 'react-i18next';
 
 function Contact() {
+
+const { t } = useTranslation();
+
   return (
     <section
       id="contact"
@@ -10,10 +14,10 @@ function Contact() {
       {/* BLOCK TITRE/ SOUS TITRE */}
       <div className="pb-16">
         <h3 className="mb-4 font-syne text-3xl font-normal text-primary sm:text-5xl md:text-6xl">
-          Contact Me
+          {t("contact.title")}
         </h3>
         <p className="font-rubik text-xl font-normal text-orange sm:text-2xl md:text-3xl">
-          Let's work together
+        {t("contact.subtitle")}
         </p>
       </div>
 
@@ -22,17 +26,16 @@ function Contact() {
       <div className="mx-5 mt-20 grid max-w-5xl items-start gap-16 p-4 sm:grid-cols-2 lg:mx-10">
         <div className="text-left">
           <h4 className="text-center font-syne text-2xl font-bold text-primary md:text-left md:text-3xl">
-            Let's Talk !
+            {t("contact.titleParagraph")}
           </h4>
           <div className="mx-auto mt-2 h-1 w-32 bg-orange sm:mx-0 sm:w-40"></div>{" "}
           {/* Ajoute un div pour la couleur */}
           <p className="mt-4 font-rubik text-sm text-primary md:text-base">
-            N'hésitez pas à me contacter ! Je reste à votre écoute pour toutes questions, échange ou collaborations potentielles.
-            Je m'engage à vous répondre rapidement.
+            {t("contact.paragraph")}
           </p>
           <div className="mt-10">
             <h5 className="mb-4 font-syne text-sm font-bold text-primary md:text-base">
-              My Email :
+              {t("contact.email")}
             </h5>
             {/* <a
               href="#"
@@ -57,7 +60,7 @@ function Contact() {
           </div>
           <div className="mt-10">
             <h5 className="font-syne text-sm font-bold text-primary md:text-base">
-              Socials :
+              {t("contact.socials")}
             </h5>
             <ul className="mt-4 flex gap-5 pl-8">
               <li>

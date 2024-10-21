@@ -1,6 +1,9 @@
 import Card from "./Card";
+import { useTranslation } from 'react-i18next';
 
 function Project() {
+
+  const { t } = useTranslation();
 
 const projects = [
   {
@@ -35,10 +38,10 @@ const projects = [
     >
       <div className="pb-16">
         <h3 className="mb-4 font-syne text-3xl font-normal text-primary sm:text-5xl md:text-6xl">
-          My Projects
+          {t("projects.title")}
         </h3>
         <p className="font-rubik text-xl font-normal text-orange sm:text-2xl md:text-3xl">
-          Crafted with Passion
+        {t("projects.subtitle")}
         </p>
       </div>
       <div className="mt-20 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">

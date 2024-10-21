@@ -16,8 +16,12 @@ import git from "../assets/images/logo/git.svg";
 import figma from "../assets/images/logo/figma.svg";
 import psql from "../assets/images/logo/postgresql.svg";
 import docker from "../assets/images/logo/docker.svg";
+import { useTranslation } from 'react-i18next';
 
 function Skills() {
+
+const { t } = useTranslation();
+
   return (
     <section
       id="skills"
@@ -26,10 +30,10 @@ function Skills() {
       {/* BLOCK TITRE/ SOUS TITRE */}
       <div className="pb-16">
         <h3 className="mb-4 font-syne text-3xl font-normal text-primary sm:text-5xl md:text-6xl">
-          My Skills
+          {t("mySkills.title")}
         </h3>
         <p className="font-rubik text-xl font-normal text-orange sm:text-2xl md:text-3xl">
-          Skills that shape my code
+          {t("mySkills.subtitle")}
         </p>
       </div>
       <div>
@@ -134,13 +138,13 @@ function Skills() {
           {/* grid grid-cols-3 gap-20 px-8 md:grid-cols-4 lg:grid-cols-5 */}
           <ul className="grid grid-cols-1 gap-4 px-16 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              "Esprit d'équipe",
-              "Communication",
-              "Adaptabilité",
-              "Résolution de problèmes",
-              "Créativité",
-              "Curiosité",
-              "Méthode Agile",
+              t("mySkills.softSkills.skill1"),
+              t("mySkills.softSkills.skill2"),
+              t("mySkills.softSkills.skill3"),
+              t("mySkills.softSkills.skill4"),
+              t("mySkills.softSkills.skill5"),
+              t("mySkills.softSkills.skill6"),
+              t("mySkills.softSkills.skill7")
             ].map((skill) => (
               <li
                 key={skill}

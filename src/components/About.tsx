@@ -1,7 +1,11 @@
 import profil from "../assets/images/profil.png";
 import guillemets from "../assets/images/“.svg";
+import { useTranslation } from 'react-i18next';
 
 function About() {
+
+  const { t } = useTranslation();
+
   return (
     <section
       id="about"
@@ -10,10 +14,12 @@ function About() {
       {/* Titre et sous titre de la page */}
       <div className="pb-16">
         <h3 className="mb-4 font-syne text-3xl font-normal text-primary sm:text-5xl md:text-6xl">
-          About Me
+          {/* About Me */}
+          {t("aboutMe.title")}
         </h3>
         <p className="mb-2 font-rubik text-xl font-normal text-orange sm:text-2xl md:text-3xl">
-          Get to know me
+          {/* Get to know me */}
+          {t("aboutMe.subtitle")}
         </p>
       </div>
 
@@ -32,19 +38,12 @@ function About() {
    
           </p> */}
           <p className="pb-8 text-justify font-rubik text-base font-normal tracking-wide text-secondary sm:text-sm md:text-base lg:text-base xl:text-lg">
-            Après avoir exercé comme infirmier, j'ai décidé de me reconvertir
-            dans le développement web, un domaine qui m'intéresse depuis
-            longtemps. J'ai complété une formation de 6 mois en développement
-            JavaScript, spécialisée en ReactJS, ce qui m'a permis d'obtenir le
-            titre professionnel de développeur web et web mobile. <br />
-            Mon parcours m’a permis de développer ma capacité d’adaptation, ma
-            rigueur et mon aptitude à travailler en équipe. Je suis
-            immédiatement disponible pour de nouvelles opportunités et reste à
-            votre disposition pour tout échange ou collaboration.
+            {t("aboutMe.Presentation1")} <br />
+            {t("aboutMe.Presentation2")}
           </p>
           {/* px-9 py-4 */}
           <a href="#" className="inline-block rounded-full bg-orange px-5 py-4 font-rubik text-sm font-semibold text-primary md:px-9 md:py-4 md:text-base">
-            Download Resume
+            {t("aboutMe.Resume")}
           </a>
         </div>
 

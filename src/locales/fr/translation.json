@@ -1,0 +1,52 @@
+{
+    "header": {
+        "home": "ACCUEIL",
+        "aboutMe": "A PROPOS",
+        "skills": "COMPETENCES",
+        "projects": "PROJETS"
+    },
+    "hero": {
+        "job": "Développeur Web"
+    },
+    "aboutMe": {
+        "title": "A Propos",
+        "subtitle": "Présentation",
+        "Presentation1": "Après avoir exercé comme infirmier, j'ai décidé de me reconvertir dans le développement web, un domaine qui m'intéresse depuis longtemps. J'ai réalisé une formation de 6 mois en développement JavaScript, spécialisée en ReactJS, ce qui m'a permis d'obtenir le titre professionnel de développeur web et web mobile.",
+        "Presentation2": " Mon parcours professionnel m’a permis de développer ma capacité d’adaptation, ma rigueur et mon aptitude à travailler en équipe. Je suis immédiatement disponible pour de nouvelles opportunités et reste à votre disposition pour tout échange ou collaboration.",
+        "Resume": "Télécharger mon CV"
+    },
+    "mySkills": {
+        "title": "Mes Compétences",
+        "subtitle": "Les outils derrière mon code",
+        "softSkills": {
+            "skill1": "Esprit d'équipe",
+            "skill2": "Communication",
+            "skill3": "Adaptabilité",
+            "skill4": "Résolution de problèmes",
+            "skill5": "Créativité",
+            "skill6": "Curiosité",
+            "skill7": "Méthode Agile"
+        }
+    },
+    "projects": {
+        "title": "Mes Projets",
+        "subtitle": "Du concept à la création"
+    },
+    "contact": {
+        "title": "Contact Me",
+        "subtitle": "Envoyé moi un message",
+        "titleParagraph": "Discutons !",
+        "paragraph": "N'hésitez pas à me contacter ! Je reste à votre écoute pour toutes questions, échanges ou collaborations potentielles. Je m'engage à vous répondre rapidement.",
+        "email": "Mon Email :",
+        "socials": "Mes Réseaux :",
+        "form" : {
+            "name": "Votre Nom",
+            "email": "Votre Email",
+            "subject": "Sujet",
+            "message": "Votre message"
+        }
+    },
+    "footer": {
+        "rights": "Tous droits réservés."
+    }
+}

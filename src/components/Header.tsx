@@ -1,6 +1,17 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import i18n from "../i18n";
+
 
 function Header() {
+  
+  // const lngs: { [key: string]: { nativeName: string } } = {
+  //   en: { nativeName: "En" },
+  //   fr: { nativeName: "Fr" }
+  // };
+
+  const { t } = useTranslation();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenu = () => {
@@ -31,15 +42,22 @@ useEffect(() => {
   return (
     // sticky top-0 - A voir ??
     <header
-      className="sticky top-0 z-10 flex w-full items-center justify-around bg-background p-4 pt-5"
+      className="sticky top-0 z-10 flex w-full items-center justify-around border-b-2 border-secondary/50 bg-background p-4 pt-5"
       role="banner"
     >
       <span
-        className="font-syne text-3xl font-medium text-primary"
+        className="font-syne text-xl font-medium text-primary lg:text-2xl"
         aria-label="Logo du site"
       >
+        {/* {t("job")} */}
         Charlie
       </span>
+
+{/* <div>
+  {Object.keys(lngs).map((lng) => (
+    <button type="submit" key={lng} onClick={() => i18n.changeLanguage(lng)} disabled={i18n.resolvedLanguage === lng}>{lngs[lng].nativeName}</button>
+  ))}
+</div> */}
 
       {/* Bouton Buger Menu */}
       <button
@@ -73,7 +91,8 @@ useEffect(() => {
               href="#hero"
               className="transition-colors duration-300 hover:text-primary"
             >
-              HOME
+              {/* HOME */}
+              {t("header.home")}
             </a>
           </li>
           <li>
@@ -81,7 +100,8 @@ useEffect(() => {
               href="#about"
               className="transition-colors duration-300 hover:text-primary"
             >
-              ABOUT ME
+              {/* ABOUT ME */}
+              {t("header.aboutMe")}
             </a>
           </li>
           <li>
@@ -89,7 +109,8 @@ useEffect(() => {
               href="#skills"
               className="transition-colors duration-300 hover:text-primary"
             >
-              SKILLS
+              {/* SKILLS */}
+              {t("header.skills")}
             </a>
           </li>
           <li>
@@ -97,7 +118,8 @@ useEffect(() => {
               href="#projects"
               className="transition-colors duration-300 hover:text-primary"
             >
-              PROJECTS
+              {/* PROJECTS */}
+              {t("header.projects")}
             </a>
           </li>
         </ul>
@@ -110,10 +132,10 @@ useEffect(() => {
         }`}
       >
         <div className="mt-16 flex flex-col items-center">
-          <a href="#hero" className="mb-4 text-xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>HOME</a>
-          <a href="#about" className="mb-4 text-xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>ABOUT ME</a>
-          <a href="#skills" className="mb-4 text-xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>SKILLS</a>
-          <a href="#projects" className="mb-4 text-xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>PROJECTS</a>
+          <a href="#hero" className="mb-4 text-xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>{t("header.home")}</a>
+          <a href="#about" className="mb-4 text-xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>{t("header.aboutMe")}</a>
+          <a href="#skills" className="mb-4 text-xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>{t("header.skills")}</a>
+          <a href="#projects" className="mb-4 text-xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>{t("header.projects")}</a>
           <a href="#contact" className="mb-4 text-xl font-semibold text-secondary transition-colors duration-300 hover:text-primary" onClick={closeMenu}>CONTACT</a>
         </div>
       </div>
@@ -124,13 +146,35 @@ useEffect(() => {
       )}
 
       {/* Bouton "CONTACT" uniquement visible à partir de md */}
-      <a
+      {/* <a
         href="#contact"
         className="hidden rounded-full border-2 border-secondary bg-btn px-9 py-4 font-rubik text-sm font-bold text-primary transition-colors duration-300 hover:border-orange hover:bg-orange md:block"
         aria-label="Contactez-moi"
       >
         CONTACT
       </a>
+      <select
+      className="absolute right-14 ml-4 cursor-pointer rounded-md border-none bg-background p-2 text-xs font-bold text-primary transition-colors duration-300"
+      onChange={(e) => i18n.changeLanguage(e.target.value)}
+    >
+      <option value="en">EN</option>
+      <option value="fr">FR</option>
+    </select> */}
+          <a
+        href="#contact"
+        className="hidden rounded-full border-2 border-secondary bg-btn px-4 py-2 font-rubik text-sm font-bold text-primary transition-colors duration-300 hover:border-orange hover:bg-orange md:mr-3 md:block lg:mr-1 lg:px-9 lg:py-4 "
+        aria-label="Contactez-moi"
+      >
+        CONTACT
+      </a>
+      <select
+      className="absolute right-14 ml-4 cursor-pointer rounded-md border-none bg-background p-2 text-xs font-bold text-primary transition-colors duration-300 sm:right-14 sm:p-2 md:right-1 lg:right-3 xl:right-9"
+      onChange={(e) => i18n.changeLanguage(e.target.value)}
+    >
+      <option value="en">EN</option>
+      <option value="fr">FR</option>
+    </select>
+      
     </header>
   );
 }

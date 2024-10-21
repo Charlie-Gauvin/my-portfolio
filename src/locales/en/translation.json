@@ -1,0 +1,53 @@
+{
+    "header": {
+        "home": "HOME",
+        "aboutMe": "ABOUT ME",
+        "skills": "SKILLS",
+        "projects": "PROJECTS"
+    },
+    "hero": {
+        "job": "Web developper"
+    },
+    "aboutMe": {
+        "title": "About Me",
+        "subtitle": "Get to know me",
+        "Presentation1": "After working as a nurse, I decided to retrain in web development, a field that has long interested me. I completed a 6-month training course in JavaScript development, specializing in ReactJS, which enabled me to obtain the professional title of web and mobile web developer.",
+        "Presentation2":" My career path has enabled me to develop my adaptability, rigor, and my ability to work as part of a team. I'm immediately available for new opportunities and remain at your disposal for any discussion or collaboration.",
+        "Resume": "Download Resume"
+    },
+    "mySkills": {
+        "title": "My Skills",
+        "subtitle": "Tools behind my code",
+        "softSkills": {
+            "skill1": "Team Spirit",
+            "skill2": "Communication",
+            "skill3": "Adaptability",
+            "skill4": "Problem Solving",
+            "skill5": "Creativity",
+            "skill6": "Curiosity",
+            "skill7": "Agile Method"
+        } 
+    },
+    "projects": {
+        "title": "My Projects",
+        "subtitle": "From concept to creation"
+    },
+    "contact": {
+        "title": "Contact Me",
+        "subtitle": "Send me a message",
+        "titleParagraph": "Let's Talk !",
+        "paragraph": "Don't hesitate to contact me! I'll be happy to answer any questions you may have, or to discuss potential collaborations. I promise to get back to you promptly.",
+        "email": "My Email :",
+        "socials": "Socials :",
+        "form" : {
+            "name": "Your Name",
+            "email": "Your Email",
+            "subject": "Subject",
+            "message": "Your Message"
+        }
+    },
+    "footer": {
+        "rights": "All rights reserved."
+    }
+
+}
