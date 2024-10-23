@@ -30,10 +30,18 @@
     },
     "projects": {
         "title": "Mes Projets",
-        "subtitle": "Du concept à la création"
+        "subtitle": "Du concept à la création",
+        "card": {
+            "card1": {
+                "description": "Découvrez mon portfolio, une vitrine de mes compétences et réalisations, où vous pourrez explorer mon parcours et en apprendre d'avantage sur moi."
+            },
+            "card2": {
+                "description": "Projet visant à convertir plusieurs devises en prenant l'euro comme monnaie de référence. Docker à également été introduit afin de faciliter le lancement du projet via un conteneur."
+            }
+        }
     },
     "contact": {
-        "title": "Contact Me",
+        "title": "Contactez Moi",
         "subtitle": "Envoyé moi un message",
         "titleParagraph": "Discutons !",
         "paragraph": "N'hésitez pas à me contacter ! Je reste à votre écoute pour toutes questions, échanges ou collaborations potentielles. Je m'engage à vous répondre rapidement.",

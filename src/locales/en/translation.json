@@ -30,7 +30,15 @@
     },
     "projects": {
         "title": "My Projects",
-        "subtitle": "From concept to creation"
+        "subtitle": "From concept to creation",
+        "card": {
+            "card1": {
+                "description": "Discover my portfolio, a showcase of my skills and achievements, where you can explore my background and learn more about me."
+            },
+            "card2": {
+                "description": "Project to convert several currencies using the euro as the reference currency. Docker has also been introduced to make it easier to launch the project via a container."
+            }
+        }
     },
     "contact": {
         "title": "Contact Me",

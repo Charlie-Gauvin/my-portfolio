@@ -17,10 +17,98 @@ import figma from "../assets/images/logo/figma.svg";
 import psql from "../assets/images/logo/postgresql.svg";
 import docker from "../assets/images/logo/docker.svg";
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
+import anime from "animejs";
 
 function Skills() {
 
-const { t } = useTranslation();
+  const { t } = useTranslation();
+  
+  // Animation d'apparition des éléments de la section "Skills"
+  useEffect(() => {
+    const handleScroll = () => {
+      const aboutSection = document.getElementById("block-title-skills");
+      if (aboutSection) {
+        const rect = aboutSection.getBoundingClientRect();
+        // Permet de déclencher l'animation lorsque la section est visible, c'est à dire que le haut de la section est inférieur ou égal à la hauteur de la fenêtre et que le bas de la section est supérieur ou égal à 0
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+          anime({
+            targets: "#block-title-skills",
+            // translateY: [100, 0],
+            translateX: [100, 0],
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 1500,
+            delay: anime.stagger(500),
+          });
+          window.removeEventListener("scroll", handleScroll);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Animation d'apparition des éléments des différentes titre de compétences
+  useEffect(() => {
+    const handleScroll = () => {
+      const aboutSection = document.getElementById("block-subtitle-skills");
+      if (aboutSection) {
+        const rect = aboutSection.getBoundingClientRect();
+        // Permet de déclencher l'animation lorsque la section est visible, c'est à dire que le haut de la section est inférieur ou égal à la hauteur de la fenêtre et que le bas de la section est supérieur ou égal à 0
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+          anime({
+            targets: "#block-subtitle-skills",
+            // translateY: [100, 0],
+            translateX: [-100, 0],
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 1500,
+            delay: anime.stagger(500),
+          });
+          window.removeEventListener("scroll", handleScroll);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Animation d'apparition des éléments des différentes compétences
+  useEffect(() => {
+    const handleScroll = () => {
+      const aboutSection = document.getElementById("block-ul-skills");
+      if (aboutSection) {
+        const rect = aboutSection.getBoundingClientRect();
+        // Permet de déclencher l'animation lorsque la section est visible, c'est à dire que le haut de la section est inférieur ou égal à la hauteur de la fenêtre et que le bas de la section est supérieur ou égal à 0
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+          anime({
+            targets: "#block-ul-skills",
+            translateY: [100, 0],
+            // translateX: [-100, 0],
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 1500,
+            delay: anime.stagger(500),
+          });
+          window.removeEventListener("scroll", handleScroll);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
 
   return (
     <section
@@ -28,24 +116,23 @@ const { t } = useTranslation();
       className="mt-40 flex flex-col items-center  pt-28 text-center"
     >
       {/* BLOCK TITRE/ SOUS TITRE */}
-      <div className="pb-16">
-        <h3 className="mb-4 font-syne text-3xl font-normal text-primary sm:text-5xl md:text-6xl">
+      <header id="block-title-skills" className="pb-16">
+        <h2 className="mb-4 font-syne text-3xl font-normal text-primary sm:text-5xl md:text-6xl">
           {t("mySkills.title")}
-        </h3>
-        <p className="font-rubik text-xl font-normal text-orange sm:text-2xl md:text-3xl">
+        </h2>
+        <h3 className="font-rubik text-xl font-normal text-orange sm:text-2xl md:text-3xl">
           {t("mySkills.subtitle")}
-        </p>
-      </div>
+        </h3>
+      </header>
       <div>
         {/* BLOCK FRONTEND */}
-        <div className="mt-20">
-          <h4 className="flex items-center justify-center pb-20 font-syne text-2xl font-semibold text-primary md:text-4xl">
+        <section className="mt-20">
+          <h4 id="block-subtitle-skills" className="flex items-center justify-center pb-20 font-syne text-2xl font-semibold text-primary md:text-4xl">
             <div className="mr-4 w-14 border-t-2 border-orange"></div>
             <span>Frontend</span>
             <div className="ml-4 w-14 border-t-2 border-orange"></div>
           </h4>
-          {/* A voir pour laisser grid ou pas */}
-          <ul className="grid grid-cols-3 gap-20 px-8 md:grid-cols-4 lg:grid-cols-5">
+          <ul id="block-ul-skills" className="grid grid-cols-3 gap-20 px-8 md:grid-cols-4 lg:grid-cols-5">
             {[
               { src: html, alt: "logo-html", name: "HTML" },
               { src: css, alt: "logo-css", name: "CSS" },
@@ -70,22 +157,22 @@ const { t } = useTranslation();
               </li>
             ))}
           </ul>
-        </div>
+        </section>
         {/* BLOCK BACKEND */}
-        <div className="mt-4">
-          <h4 className="flex items-center justify-center py-20 font-syne text-2xl font-semibold text-primary md:text-4xl">
+        <section className="mt-4">
+          <h4 id="block-subtitle-skills" className="flex items-center justify-center py-20 font-syne text-2xl font-semibold text-primary md:text-4xl">
             <div className="mr-4 w-14 border-t-2 border-orange"></div>
             <span>Backend</span>
             <div className="ml-4 w-14 border-t-2 border-orange"></div>
           </h4>
-          <ul className="grid grid-cols-3 gap-20 px-8 md:grid-cols-4 lg:grid-cols-5">
+          <ul id="block-ul-skills" className="grid grid-cols-3 gap-20 px-8 md:grid-cols-4 lg:grid-cols-5">
             {[
               { src: node, alt: "logo-node", name: "node" },
               { src: express, alt: "logo-express", name: "express" },
               { src: sequelize, alt: "logo-sequelize", name: "sequelize" },
               { src: psql, alt: "logo-psql", name: "postgresql" },
             ].map(({ src, alt, name }) => (
-              // h-60 w-52
+
 
               <li
                 key={alt}
@@ -98,15 +185,15 @@ const { t } = useTranslation();
               </li>
             ))}
           </ul>
-        </div>
+        </section>
         {/* BLOCK OTHERS */}
-        <div className="mt-4">
-          <h4 className="flex items-center justify-center py-20 font-syne text-2xl font-semibold text-primary md:text-4xl">
+        <section className="mt-4">
+          <h4 id="block-subtitle-skills" className="flex items-center justify-center py-20 font-syne text-2xl font-semibold text-primary md:text-4xl">
             <div className="mr-4 w-14 border-t-2 border-orange"></div>
             <span>Others</span>
             <div className="ml-4 w-14 border-t-2 border-orange"></div>
           </h4>
-          <ul className="grid grid-cols-3 gap-20 px-8 md:grid-cols-4 lg:grid-cols-5">
+          <ul id="block-ul-skills" className="grid grid-cols-3 gap-20 px-8 md:grid-cols-4 lg:grid-cols-5">
             {[
               { src: github, alt: "logo-github", name: "github" },
               { src: git, alt: "logo-git", name: "git" },
@@ -114,7 +201,7 @@ const { t } = useTranslation();
               { src: vite, alt: "logo-vite", name: "vite" },
               { src: figma, alt: "logo-figma", name: "figma" },
             ].map(({ src, alt, name }) => (
-              // h-60 w-52
+
 
               <li
                 key={alt}
@@ -127,16 +214,16 @@ const { t } = useTranslation();
               </li>
             ))}
           </ul>
-        </div>
+        </section>
         {/* BLOCK SOFT SKILLS */}
-        <div className="mt-4">
-          <h4 className="flex items-center justify-center py-20 font-syne text-2xl font-semibold text-primary md:text-4xl">
+        <section className="mt-4">
+          <h4 id="block-subtitle-skills" className="flex items-center justify-center py-20 font-syne text-2xl font-semibold text-primary md:text-4xl">
             <div className="mr-4 w-14 border-t-2 border-orange"></div>
             <span>Soft Skills</span>
             <div className="ml-4 w-14 border-t-2 border-orange"></div>
           </h4>
-          {/* grid grid-cols-3 gap-20 px-8 md:grid-cols-4 lg:grid-cols-5 */}
-          <ul className="grid grid-cols-1 gap-4 px-16 sm:grid-cols-2 lg:grid-cols-3">
+
+          <ul id="block-ul-skills"  className="grid grid-cols-1 gap-4 px-16 sm:grid-cols-2 lg:grid-cols-3">
             {[
               t("mySkills.softSkills.skill1"),
               t("mySkills.softSkills.skill2"),
@@ -154,7 +241,7 @@ const { t } = useTranslation();
               </li>
             ))}
           </ul>
-        </div>
+        </section>
       </div>
     </section>
   );
