@@ -1,6 +1,6 @@
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 type FormData = {
   name: string;
@@ -10,9 +10,7 @@ type FormData = {
 };
 
 function Form() {
-
-
-const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const {
     register,
@@ -68,12 +66,13 @@ const { t } = useTranslation();
         <input
           id="name"
           type="text"
-          placeholder= {t("contact.form.name")}
+          placeholder={t("contact.form.name")}
           className="w-full rounded-md bg-primary px-4 py-3 text-sm text-black outline-orange focus:bg-transparent focus:text-primary"
           {...register("name", { required: true, maxLength: 70 })}
+          aria-invalid={errors.name ? "true" : "false"}
         />
         {errors.name && (
-          <p className="text-red-500">
+          <p className="text-red-500" role="alert">
             Please enter a valid name.
           </p>
         )}
@@ -88,9 +87,10 @@ const { t } = useTranslation();
           placeholder={t("contact.form.email")}
           className="w-full rounded-md bg-primary px-4 py-3 text-sm text-black outline-orange focus:bg-transparent focus:text-primary"
           {...register("email", { required: true, maxLength: 254 })}
+          aria-invalid={errors.email ? "true" : "false"}
         />
         {errors.email && (
-          <p className="text-red-500">
+          <p className="text-red-500" role="alert">
             Please enter a valid email.
           </p>
         )}
@@ -105,9 +105,10 @@ const { t } = useTranslation();
           placeholder={t("contact.form.subject")}
           className="w-full rounded-md bg-primary px-4 py-3 text-sm text-black outline-orange focus:bg-transparent focus:text-primary"
           {...register("subject", { required: true, maxLength: 100 })}
+          aria-invalid={errors.subject ? "true" : "false"}
         />
         {errors.subject && (
-          <p className="text-red-500">
+          <p className="text-red-500" role="alert">
             Please fill out this field correctly.
           </p>
         )}
@@ -123,9 +124,10 @@ const { t } = useTranslation();
           rows={6}
           className="w-full resize-none rounded-md bg-primary px-4 pt-3 text-sm text-black outline-orange focus:bg-transparent focus:text-primary"
           {...register("message", { required: true, maxLength: 700 })}
+          aria-invalid={errors.message ? "true" : "false"}
         ></textarea>
         {errors.message && (
-          <p className="text-red-500">
+          <p className="text-red-500" role="alert">
             Please fill out this field correctly.
           </p>
         )}
@@ -133,6 +135,7 @@ const { t } = useTranslation();
       <button
         type="submit"
         className="!mt-6 rounded-md border border-orange bg-orange px-5 py-3 text-sm font-semibold tracking-wide text-primary transition-colors duration-300 hover:border hover:border-secondary hover:bg-btn md:text-base"
+        aria-label="Send message"
       >
         Send message
       </button>

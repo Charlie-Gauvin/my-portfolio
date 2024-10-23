@@ -1,10 +1,10 @@
-import Header from "./components/Header";
+import Header from "./components/layout/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Project from "./components/project/Project";
 import Contact from "./components/Contact/Contact"
-import Footer from "./components/Footer";
+import Footer from "./components/layout/Footer";
 import ScrollToTopButton from "./components/utils/ScrollToTop";
 
 function App() {

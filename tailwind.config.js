@@ -20,6 +20,9 @@ export default {
         syne: ['Syne', 'sans-serif'],
         rubik: ['Rubik', 'sans-serif'],
       },
+      screens: {
+        '3xl': '2560px', // Breakpoint pour les écrans de 2560px
+      },
     },
   },
   plugins: [

@@ -1,10 +1,67 @@
 import EmailButton from "../Contact/EmailButton";
 import Form from "../Contact/Form";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+import anime from "animejs";
 
 function Contact() {
+  const { t } = useTranslation();
 
-const { t } = useTranslation();
+  // Animation d'apparition du titre + sous titre
+  useEffect(() => {
+    const handleScroll = () => {
+      const aboutSection = document.getElementById("block-title-contact");
+      if (aboutSection) {
+        const rect = aboutSection.getBoundingClientRect();
+        // Permet de déclencher l'animation lorsque la section est visible, c'est à dire que le haut de la section est inférieur ou égal à la hauteur de la fenêtre et que le bas de la section est supérieur ou égal à 0
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+          anime({
+            targets: "#block-title-contact",
+            // translateY: [100, 0],
+            translateX: [100, 0],
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 1500,
+            delay: anime.stagger(500),
+          });
+          window.removeEventListener("scroll", handleScroll);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Animation d'apparition des éléments de la section Texte de présentation
+  useEffect(() => {
+    const handleScroll = () => {
+      const aboutSection = document.getElementById("block-content-contact");
+      if (aboutSection) {
+        const rect = aboutSection.getBoundingClientRect();
+        // Permet de déclencher l'animation lorsque la section est visible, c'est à dire que le haut de la section est inférieur ou égal à la hauteur de la fenêtre et que le bas de la section est supérieur ou égal à 0
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+          anime({
+            targets: "#block-content-contact",
+            translateY: [100, 0],
+            // translateX: [100, 0],
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 1500,
+            delay: anime.stagger(500),
+          });
+          window.removeEventListener("scroll", handleScroll);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <section
@@ -12,24 +69,26 @@ const { t } = useTranslation();
       className="my-40 flex flex-col items-center  pt-28 text-center"
     >
       {/* BLOCK TITRE/ SOUS TITRE */}
-      <div className="pb-16">
-        <h3 className="mb-4 font-syne text-3xl font-normal text-primary sm:text-5xl md:text-6xl">
+      <header id="block-title-contact" className="pb-16">
+        <h2 className="mb-4 font-syne text-3xl font-normal text-primary sm:text-5xl md:text-6xl">
           {t("contact.title")}
+        </h2>
+        <h3 className="font-rubik text-xl font-normal text-orange sm:text-2xl md:text-3xl">
+          {t("contact.subtitle")}
         </h3>
-        <p className="font-rubik text-xl font-normal text-orange sm:text-2xl md:text-3xl">
-        {t("contact.subtitle")}
-        </p>
-      </div>
+      </header>
 
       {/* FORMULAIRE DE CONTACT */}
       {/* 1ère partie du formulaire */}
-      <div className="mx-5 mt-20 grid max-w-5xl items-start gap-16 p-4 sm:grid-cols-2 lg:mx-10">
+      <div
+        id="block-content-contact"
+        className="mx-5 mt-20 grid max-w-5xl items-start gap-16 p-4 sm:grid-cols-2 lg:mx-10"
+      >
         <div className="text-left">
           <h4 className="text-center font-syne text-2xl font-bold text-primary md:text-left md:text-3xl">
             {t("contact.titleParagraph")}
           </h4>
           <div className="mx-auto mt-2 h-1 w-32 bg-orange sm:mx-0 sm:w-40"></div>{" "}
-          {/* Ajoute un div pour la couleur */}
           <p className="mt-4 font-rubik text-sm text-primary md:text-base">
             {t("contact.paragraph")}
           </p>
@@ -37,25 +96,7 @@ const { t } = useTranslation();
             <h5 className="mb-4 font-syne text-sm font-bold text-primary md:text-base">
               {t("contact.email")}
             </h5>
-            {/* <a
-              href="#"
-              className="flex items-center gap-4 pl-8 font-rubik text-primary underline underline-offset-4"
-            >
-              <svg
-                width="32px"
-                height="32px"
-                role="img"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Gmail</title>
-                <path
-                  fill="#FFFFFF"
-                  d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
-                />
-              </svg>
-              Monemail@gmail.com
-            </a> */}
+
             <EmailButton />
           </div>
           <div className="mt-10">
@@ -64,7 +105,12 @@ const { t } = useTranslation();
             </h5>
             <ul className="mt-4 flex gap-5 pl-8">
               <li>
-                <a href="https://www.linkedin.com/in/charlie-gauvin" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.linkedin.com/in/charlie-gauvin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
                   <svg
                     width="32px"
                     height="32px"
@@ -81,7 +127,12 @@ const { t } = useTranslation();
                 </a>
               </li>
               <li>
-                <a href="https://github.com/Charlie-Gauvin" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://github.com/Charlie-Gauvin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
                   <svg
                     width="32px"
                     height="32px"
