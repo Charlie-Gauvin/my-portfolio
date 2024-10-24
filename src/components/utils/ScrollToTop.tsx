@@ -11,15 +11,17 @@ const ScrollToTopButton = () => {
   if (window.innerWidth >= 1440) {
       threshold = 4000;
     } else if (window.innerWidth >= 1024) {
-      threshold = 5200;
+      threshold = 4850;
+      // console.log(scrollY);
+      
     } else if (window.innerWidth >= 768) {
-      threshold = 5400;
+      threshold = 5100;
     } else if (window.innerWidth >= 425) {
-      threshold = 6600;
+      threshold = 6150;
     } else if (window.innerWidth >= 375) {
-      threshold = 6700;
+      threshold = 6200;
     } else {
-      threshold = 6800;
+      threshold = 6300;
     }
   
     // Affiche ou cache la flèche
