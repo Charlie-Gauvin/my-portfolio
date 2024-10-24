@@ -139,7 +139,7 @@ function Form() {
         className="!mt-6 rounded-md border border-orange bg-orange px-5 py-3 text-sm font-semibold tracking-wide text-primary transition-colors duration-300 hover:border hover:border-secondary hover:bg-btn md:text-base"
         aria-label="Send message"
       >
-        Send message
+        {t("contact.form.send")}
       </button>
     </form>
   );

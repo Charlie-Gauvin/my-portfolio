@@ -51,7 +51,8 @@
             "name": "Your Name",
             "email": "Your Email",
             "subject": "Subject",
-            "message": "Your Message"
+            "message": "Your Message",
+            "send": "Send"
         }
     },
     "footer": {
