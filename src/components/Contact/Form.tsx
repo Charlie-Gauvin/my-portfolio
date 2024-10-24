@@ -16,6 +16,7 @@ function Form() {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<FormData>();
 
   // Fonction pour envoyer le formulaire
@@ -44,6 +45,7 @@ function Form() {
         confirmButtonColor: "#FF9143",
       });
       // Réinitialise le formulaire
+      reset();
     } else {
       await Swal.fire({
         title: "Error!",
