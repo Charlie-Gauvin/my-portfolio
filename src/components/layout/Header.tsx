@@ -32,14 +32,13 @@ function Header() {
 
   return (
     <header
-      className="sticky top-0 z-10 flex w-full items-center justify-around border-b-2 border-secondary/50 bg-background p-4 pt-5"
+      className="sticky top-0 z-10 flex w-full items-center border-b-2 border-secondary/50 bg-background p-4 pt-5 md:justify-around"
       role="banner"
     >
       <span
         className="font-syne text-xl font-medium text-primary lg:text-2xl"
         aria-label="Logo du site"
       >
-        {/* {t("job")} */}
         Charlie
         {/* &lt; /&gt; */}
       </span>
