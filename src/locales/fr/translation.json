@@ -37,6 +37,9 @@
             },
             "card2": {
                 "description": "Projet visant à convertir plusieurs devises en prenant l'euro comme monnaie de référence. Docker à également été introduit afin de faciliter le lancement du projet via un conteneur."
+            },
+            "card3": {
+                "description": "Création d'une API Backend effectuée en groupe. L'API implémente les principes fondamentaux du CRUD et intégre plusieurs couches de sécurité pour assurer la protection des données."
             }
         }
     },

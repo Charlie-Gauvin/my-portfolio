@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import anime from "animejs";
 import portfolio from "../../assets/images/project-cards/portfolio.png"
 import converter from "../../assets/images/project-cards/converter.png"
+import API from "../../assets/images/project-cards/API-olast.png"
 
 
 function Project() {
@@ -26,6 +27,16 @@ function Project() {
       tags: ["React", "Sass", "Docker"],
       url: "https://react-converter-upqi.onrender.com/",
     },
+    {
+      src: API,
+      alt: "Backend API",
+      title: "Backend API",
+      description: t("projects.card.card3.description"),
+      tags: ["JavaScript", "PostgreSQL", "Express","Docker"],
+      url: "https://github.com/Charlie-Gauvin/O-last-back",
+    },
+
+
   ];
 
   // Animation d'apparition du titre + sous titre
