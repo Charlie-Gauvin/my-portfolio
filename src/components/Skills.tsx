@@ -16,6 +16,8 @@ import git from "../assets/images/logo/git.svg";
 import figma from "../assets/images/logo/figma.svg";
 import psql from "../assets/images/logo/postgresql.svg";
 import docker from "../assets/images/logo/docker.svg";
+import strapi from "../assets/images/logo/strapi.svg";
+import nextjs from "../assets/images/logo/nextdotjs.svg";
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import anime from "animejs";
@@ -167,10 +169,11 @@ function Skills() {
           </h4>
           <ul id="block-ul-skills" className="grid grid-cols-3 gap-20 px-8 md:grid-cols-4 lg:grid-cols-5">
             {[
-              { src: node, alt: "logo-node", name: "node" },
-              { src: express, alt: "logo-express", name: "express" },
+              { src: node, alt: "logo-node", name: "Node" },
+              { src: express, alt: "logo-express", name: "Express" },
               { src: sequelize, alt: "logo-sequelize", name: "sequelize" },
-              { src: psql, alt: "logo-psql", name: "postgresql" },
+              { src: nextjs, alt: "logo-nextjs", name: "Next.js" },
+              { src: psql, alt: "logo-psql", name: "Postgresql" },
             ].map(({ src, alt, name }) => (
 
 
@@ -195,11 +198,12 @@ function Skills() {
           </h4>
           <ul id="block-ul-skills" className="grid grid-cols-3 gap-20 px-8 md:grid-cols-4 lg:grid-cols-5">
             {[
-              { src: github, alt: "logo-github", name: "github" },
-              { src: git, alt: "logo-git", name: "git" },
-              { src: docker, alt: "logo-docker", name: "docker" },
-              { src: vite, alt: "logo-vite", name: "vite" },
-              { src: figma, alt: "logo-figma", name: "figma" },
+              { src: github, alt: "logo-github", name: "Github" },
+              { src: git, alt: "logo-git", name: "Git" },
+              { src: docker, alt: "logo-docker", name: "Docker" },
+              { src: vite, alt: "logo-vite", name: "Vite" },
+              { src: figma, alt: "logo-figma", name: "Figma" },
+              { src: strapi, alt: "logo-strapi", name: "Strapi" },
             ].map(({ src, alt, name }) => (
 
 

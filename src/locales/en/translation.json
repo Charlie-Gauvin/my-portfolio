@@ -40,6 +40,10 @@
             },
             "card3": {
                 "description": "Group creation of a backend API. The API implements the fundamental principles of CRUD and integrates several layers of security to ensure data protection."
+            },
+            "card4": {
+                "title": "Online Art Gallery",
+                "description": "A dynamic platform for a painter to showcase their artwork, manage exhibitions, and interact with visitors through a contact form."
             }
         }
     },

@@ -5,6 +5,7 @@ import anime from "animejs";
 import portfolio from "../../assets/images/project-cards/portfolio.png"
 import converter from "../../assets/images/project-cards/converter.png"
 import API from "../../assets/images/project-cards/API-olast.png"
+import artportfolio from "../../assets/images/project-cards/art-portfolio.png"
 
 
 function Project() {
@@ -16,8 +17,9 @@ function Project() {
       alt: "Portfolio",
       title: "Portfolio",
       description: t("projects.card.card1.description"),
-      tags: ["React", "Tailwind"],
-      url: "#",
+      tags: ["React", "TailwindCSS"],
+      codeUrl: "https://github.com/Charlie-Gauvin/my-portfolio", // Lien vers le code source
+      siteUrl: "https://www.charliegauvin.com/", // Lien vers le site en ligne
     },
     {
       src: converter,
@@ -25,7 +27,8 @@ function Project() {
       title: "Converter",
       description: t("projects.card.card2.description"),
       tags: ["React", "Sass", "Docker"],
-      url: "https://react-converter-upqi.onrender.com/",
+      codeUrl: "https://github.com/Charlie-Gauvin/React-converter",
+      siteUrl: "https://react-converter-upqi.onrender.com/",
     },
     {
       src: API,
@@ -33,7 +36,16 @@ function Project() {
       title: "Backend API",
       description: t("projects.card.card3.description"),
       tags: ["JavaScript", "PostgreSQL", "Express","Docker"],
-      url: "https://github.com/Charlie-Gauvin/O-last-back",
+      codeUrl: "https://github.com/Charlie-Gauvin/O-last-back",
+    },
+    {
+      src: artportfolio,
+      alt: "Online Art Galery",
+      title: t("projects.card.card4.title"),
+      description: t("projects.card.card4.description"),
+      tags: ["Nextjs", "Strapi", "TailwindCSS","PostgreSQL"],
+      codeUrl: "https://github.com/Charlie-Gauvin/art-porfolio-frontend",
+      siteUrl: "https://www.patrickgauvinart.com/",
     },
 
 
@@ -120,7 +132,8 @@ function Project() {
             title={project.title}
             description={project.description}
             tags={project.tags}
-            url={project.url}
+            codeUrl={project.codeUrl}
+            siteUrl={project.siteUrl}
           />
         ))}
       </section>

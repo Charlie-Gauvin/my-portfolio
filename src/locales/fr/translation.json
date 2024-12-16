@@ -40,6 +40,10 @@
             },
             "card3": {
                 "description": "Création d'une API Backend effectuée en groupe. L'API implémente les principes fondamentaux du CRUD et intégre plusieurs couches de sécurité pour assurer la protection des données."
+            },
+            "card4": {
+                "title": "Galerie d'Art en Ligne",
+                "description": "Une plateforme dynamique pour un artiste peintre, permettant de présenter ses œuvres, gérer ses expositions et interagir avec les visiteurs via un formulaire de contact."
             }
         }
     },
